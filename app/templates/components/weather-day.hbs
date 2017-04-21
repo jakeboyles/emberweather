@@ -1,0 +1,10 @@
+<div {{action 'clickItem' data on='mouseEnter'}} class="col-md-3 day">
+	<div>
+		<h3>Max:{{data.temp.max}}</h3>
+		<h3>Min:{{data.temp.min}}</h3>
+
+		{{#each data.weather as |day|}}
+  			{{day.description}}
+		{{/each}}
+	</div>
+</div>

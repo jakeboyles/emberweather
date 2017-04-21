@@ -1,0 +1,14 @@
+<h3>Weather Data</h3>
+{{weather.city.name}}, {{weather.city.country}}
+
+<div class="row">
+	<div class="col-md-4">
+		{{g-map lat=weather.city.coord.lat lng=weather.city.coord.lon zoom=12}}
+	</div>
+
+	<div class="col-md-6">
+		{{#each weather.list as |day|}}
+		  {{weather-day data=day}}
+		{{/each}}
+	</div>
+</div>

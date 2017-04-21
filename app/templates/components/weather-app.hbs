@@ -6,7 +6,7 @@
 		{{g-map lat=weather.city.coord.lat lng=weather.city.coord.lon zoom=12}}
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-md-8">
 		{{#each weather.list as |day|}}
 		  {{weather-day data=day}}
 		{{/each}}

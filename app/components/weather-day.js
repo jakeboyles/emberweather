@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	actions:{
-  		overItem(data){
+  		hoveringOverTheMotherFucka(data){
   			console.log(data)
   		}
   	}

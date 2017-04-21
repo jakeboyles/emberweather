@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	actions:{
-  		clickItem(data){
+  		overItem(data){
   			console.log(data)
   		}
   	}

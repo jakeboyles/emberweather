@@ -3,18 +3,15 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
 	model(params) {
-		let zip = params.zipcode || '45011';
-		Ember.set(this,'zip',zip);
-    	return Ember.$.getJSON(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${zip}&mode=JSON&units=imperial&cnt=7&apikey=d0458c4189cf033bf80c84d7a0d38ab0`);
+		  let zip = params.zipcode || 'Cincinnati';
+		  Ember.set(this,'zip',zip);
+      return this.store.query('weather',zip);
   	},
 
   	actions:{
   		updateZip(model){
-  			Ember.set(this,'zip',model.zip);
-  			Ember.$.getJSON(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${Ember.get(this,'zip')}&mode=JSON&units=imperial&cnt=7&apikey=d0458c4189cf033bf80c84d7a0d38ab0`)
-		    .then((result) => {
-		       this.controller.set('model', result)
-		    });
+        Ember.set(this,'zip',model.zip);
+  			this.controller.set('model', this.store.query('weather',Ember.get(this,'zip')));
   		}
   	}
 });

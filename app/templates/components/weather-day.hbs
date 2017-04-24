@@ -1,10 +1,12 @@
 <div {{action 'hoveringOverTheMotherFucka' data on='mouseEnter'}} class="col-md-3 day">
 	<div>
-		<h3>Max:{{data.temp.max}}</h3>
-		<h3>Min:{{data.temp.min}}</h3>
+		<h2>{{data.date}}</h2>
+		<h3>Max:{{data.max}}</h3>
+		<h3>Min:{{data.min}}</h3>
+		<h3>{{data.description}}</h3>
 
-		{{#each data.weather as |day|}}
-  			{{day.description}}
-		{{/each}}
+		{{g-map lat=data.lat lng=data.long zoom=12}}
+
+
 	</div>
 </div>

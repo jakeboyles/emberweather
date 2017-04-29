@@ -20,3 +20,24 @@ div.day > div  {
   margin-bottom:40px;
   margin-top:15px;
 }
+
+nav {
+	background-color:pink;
+	padding:20px;
+	margin-bottom:30px;
+	li {
+		display:inline;
+		padding:20px;
+
+		a {
+			color:#fff;
+			font-size:21px;
+		}
+	}
+}
+
+.joke {
+	h2 {
+		height:4em;
+	}
+}

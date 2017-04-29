@@ -2,12 +2,11 @@ import DS from 'ember-data';
 import moment from 'moment';
 
 export default DS.JSONAPISerializer.extend({
-	normalizeResponse (store, primaryModelClass, payload, id, requestType){
-		console.log(payload)
-		let data = {
+	normalizeResponse (store, primaryModelClass, payload){
+		return {
 			data:payload.list.map((day,idx)=>{
 				return {
-					id:idx,
+					id:idx, // Laz E
 					type:"weather",
 					attributes:{
 						date:moment(day.dt*1000).format('dddd'),
@@ -20,6 +19,5 @@ export default DS.JSONAPISerializer.extend({
 				}
 			})
 		}
-		return data;
 	}
 });

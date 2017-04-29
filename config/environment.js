@@ -24,12 +24,12 @@ module.exports = function(environment) {
   };
 
   ENV['g-map'] = {
-  exclude: true,
-  libraries: ['places', 'geometry'],
-  key: 'AIzaSyBUfv8dzIYRBb34jYBlDZ-1GynwkuVu4UM',
-  version: '3.26',
-  protocol: 'https'
-}
+    exclude: true,
+    libraries: [],
+    key: 'AIzaSyBUfv8dzIYRBb34jYBlDZ-1GynwkuVu4UM',
+    version: '3.26',
+    protocol: 'https'
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

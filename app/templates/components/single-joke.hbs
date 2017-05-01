@@ -1,4 +1,4 @@
-<div class="col-md-3 day joke">
+<div {{action 'sayHello' joke}} class="col-md-3 day joke">
 	<div>
 		<h2>{{truncate-text joke.joke limit=40}}</h2>
 		{{#link-to 'joke' joke.id}}Learn More{{/link-to}}
